@@ -1,0 +1,3 @@
+"""Useful metadata."""
+
+success = True

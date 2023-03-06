@@ -1,0 +1,5 @@
+# Ignore all of the following folder
+app/data
+
+# But actually, don't ignore these files
+!app/data/metadata.py
