@@ -67,6 +67,6 @@ docker ps -a
 
 Delete the image
 ```bash
-# docker run <my_image>:<my_tag>
+# docker rmi <my_image>:<my_tag>
 docker rmi my-lovely-app:latest
 ```
