@@ -118,7 +118,7 @@ Change directory
 cd awesome-compose
 ```
 
-Run three microservices on ports 8001, 8002 and 8003
+Run three services on ports 8001, 8002 and 8003
 ```bash
 # Run "API" service as defined in:
 # https://github.com/docker/awesome-compose/blob/master/fastapi/compose.yaml
