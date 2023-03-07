@@ -2,6 +2,8 @@
 
 This code has been tested with: https://www.docker.com/play-with-docker/
 
+## 1. Using Docker
+
 Build your image
 ```bash
 # docker build --tag <my_image>:<my_tag> .
@@ -50,8 +52,7 @@ docker exec -it agitated_albattani python3 -c "import requests; print(requests.g
 
 Check the port is exposed properly  (from outside the container)
 ```bash
-# This line is untested.
-# python3 -c "import requests; print(requests.get('https://localhost:8000/').json())"
+python3 -c "import requests; print(requests.get('http://localhost:8000/').json())"
 ```
 
 Stop the running container
@@ -69,4 +70,23 @@ Delete the image
 ```bash
 # docker rmi <my_image>:<my_tag>
 docker rmi my-lovely-app:latest
+```
+
+## 2. Using Docker Compose
+
+The above steps can be automated with the use of a docker-compose file.
+
+Bring up the container
+```bash
+docker-compose up -d --build
+```
+
+Check the port is exposed properly  (from outside the container)
+```bash
+python3 -c "import requests; print(requests.get('http://localhost:8000/').json())"
+```
+
+Tear down the container
+```bash
+docker compose down
 ```
